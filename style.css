@@ -1,0 +1,105 @@
+html {
+    background-color: #eee;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.mainBox {
+    display: grid;
+    grid-template-areas: 
+    'titleBox titleBox titleBox'
+    'categoryColumn listColumn listColumn'
+    'categoryColumn listColumn listColumn';
+    grid-template-columns: 25%;
+    grid-template-rows: 60px;
+    font-family: sans-serif;
+
+    width: 1440px;
+    height: 500px;
+
+    background-color: blueviolet;
+}
+
+.titleBox {
+    grid-area: titleBox;
+
+    display: flex;
+    align-items: center;
+    font-size:  2rem;
+    padding: 1rem;
+    border-bottom: 1px solid rgb(70, 70, 70);
+
+    background-color: red;
+}
+
+.categoryColumn {
+    grid-area: categoryColumn;
+    background-color: orange;
+    border-right: 1px solid rgb(70, 70, 70);
+}
+
+.listColumn {
+    grid-area: listColumn;
+    background-color: yellow;
+    padding: 1rem;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    height: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+
+    background-color: cornflowerblue;
+}
+
+.checkBox {
+    margin-right: 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+.task {
+    margin-right: auto;
+}
+
+.dueDate {    
+    padding: .2rem;
+    margin-right: 1rem;
+}
+
+.deleteTask {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+
+
+.addTodo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    height: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+
+    background-color: cornflowerblue;
+}
