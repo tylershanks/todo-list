@@ -7,6 +7,8 @@ export function addTodo() {
     //resets the input values when you go to create a new event
     document.getElementById("toDoDesc").value = "";
     document.getElementById("toDoDueDate").value = "";
+
+    
     //All of this is the Add Todo popup menu
     // Get the modal
     var modal = document.getElementById("myModal");
@@ -36,19 +38,24 @@ export function addTodo() {
 
     submitToDo.onclick = function submitToDo () {
         console.log('sumbit to do button pressed')
-        var addTodo = document.getElementById("addTodo");
-        var toDoDesc = document.getElementById("toDoDesc").value;
-        var toDoDueDate = document.getElementById("toDoDueDate").value;
+        let addTodo = document.getElementById("addTodo");
+        let toDoDesc = document.getElementById("toDoDesc").value;
+        let toDoDueDate = document.getElementById("toDoDueDate").value;
+        let categorySelector = document.getElementById("categorySelector").value;
+        console.log(categorySelector);
 
         //selecting the list column div and making it a constant so we can
         //append new todo's to it
-        const listColumn = document.querySelector(".listColumn");
+        const mainCategoryList = document.querySelector(".mainCategoryList");
+        const subCategoryList = document.querySelector("."+categorySelector);
 
         //creating the todo div for the individual todo's
         const toDo = document.createElement("div");
         toDo.classList.add("todo");
         toDo.setAttribute("id", "todo")
-        listColumn.insertBefore(toDo, addTodo);
+        //mainCategoryList.insertBefore(toDo, addTodo);
+        subCategoryList.appendChild(toDo);
+        //mainCategoryList.appendChild(toDo);
 
 
         //adding to the todo itself
@@ -84,6 +91,14 @@ export function addTodo() {
         //adding both event listeners for the delete button and the check box
         deleteTodoBtn.addEventListener("click", deleteTodo);
         checkBoxBtn.addEventListener("click", checkBox);
+
+
+
+
+
+        
+
+        
     }
 
     

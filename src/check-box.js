@@ -19,7 +19,7 @@ export function checkBox() {
     }
 
     else {
-        toDoDiv.style.backgroundColor = "cornflowerblue";
+        toDoDiv.style.backgroundColor = "rgb(240, 219, 152)";
         toDoDiv.style.color = "black";
         toDoDiv.style.textDecoration = ""
     }
