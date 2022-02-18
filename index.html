@@ -11,32 +11,61 @@
     <div id="mainBox" class="mainBox">
         <div class="titleBox">To-Do List</div>
 
-        <div class="categoryColumn">
-            <div class="category">
-                All
+        <div class="categoryColumn" id="categoryColumn">
+            <div class="mainCategory" id="mainCategory">
+                <div class="maincatbutn" id="maincatbutn">
+                    Main
+                </div>
+
             </div>
+                
+
+            <button class="addCategory" id="addCategory">+ Add Category</button>
 
         </div>
 
         <div class="listColumn" id='listColumn'>
-            <!--
-            <div class="todo">
-                <input type="checkbox" class="checkBox" id="checkbox"/>
-                <label for="checkbox" class="task">Finish this project</label>
-                <div class="dueDate">Due by: 2/20/22</div>
+            <div class="mainCategoryList" id="mainCategoryList">
                 
-                <button class="deleteTodo" id="deleteTodo">X</button>
             </div>
-            -->
-            
-            <button class="addTodo" id="addTodo">+ Add Task</button>
 
             
+
+            <button class="addTodo" id="addTodo">+ Add Task</button>
+
+
+
+            <!-- sample to do
+                <div class="todo">
+                    <input type="checkbox" class="checkBox" id="checkbox"/>
+                    <label for="checkbox" class="task">Main Cat List Member</label>
+                    <div class="maintest" id="maintest">Main</div>
+                    <div class="dueDate">Due by: 2/20/22</div>
+                    
+                    <button class="deleteTodo" id="deleteTodo">X</button>
+                </div>
+                -->
+
+            <!-- sample sub category with sample to do
+            <div class="subCategoryList" id="subCategoryList">
+
+                <div class="todo">
+                    <input type="checkbox" class="checkBox" id="checkbox"/>
+                    <label for="checkbox" class="task">Sub Cat 1 List Member</label>
+                    <div class="subOne" id="subOne">Sub 1</div>
+                    <div class="dueDate">Due by: 2/20/22</div>
+                    
+                    <button class="deleteTodo" id="deleteTodo">X</button>
+                </div>
+
+            </div>
+            -->
+
 
         </div>
     </div>
 
-    <!-- The Modal -->
+    <!-- The To Do Modal -->
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
@@ -44,6 +73,10 @@
             
 
             <input type="text" maxlength="75" id="toDoDesc" placeholder="Enter To Do Here" value="">
+
+            <select id="categorySelector" class="categorySelector">
+                <option value="mainCategoryList">Main</option>
+            </select>
 
             <label for="toDoDueDate">Due Date   </label>
             <input type="date" id="toDoDueDate" name="toDoDueDate" value="">
@@ -54,6 +87,21 @@
             -->
 
             <button id="submitToDo">Submit To Do</button>
+            <span class="close" id="closeModalBtn">&times;</span>
+        </div>
+
+    </div>
+
+    <!-- The Category Modal -->
+    <div id="myCategoryModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            
+
+            <input type="text" maxlength="75" id="categoryDesc" placeholder="Enter Category Here" value="">
+
+            <button id="submitCategory">Submit Category</button>
             <span class="close" id="closeModalBtn">&times;</span>
         </div>
 
