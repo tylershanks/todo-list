@@ -2,7 +2,7 @@ import { deleteCategory } from "./delete-category";
 import { changeCategory } from './change-category.js'
 
 export function addCategory() {
-    console.log("add category button pressed")
+    //console.log("add category button pressed")
 
     //All of this is the Add Category popup menu
     // Get the modal
@@ -20,7 +20,7 @@ export function addCategory() {
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
-        console.log('close category modal button pressed')
+        //console.log('close category modal button pressed')
         modal.style.display = "none";
     }
 
@@ -35,7 +35,7 @@ export function addCategory() {
 
 
     submitCategory.onclick = function submitCategory () {
-        console.log('sumbit category button pressed')
+        //console.log('sumbit category button pressed')
         var addCategory = document.getElementById("addCategory");
         var categoryDesc = document.getElementById("categoryDesc").value;
         
@@ -84,7 +84,7 @@ export function addCategory() {
         categorySelectorOption.setAttribute("value", categoryDesc);
         categorySelectorOption.innerHTML = categoryDesc;
         categorySelector.appendChild(categorySelectorOption);
-        console.log(categorySelector);
+        //console.log(categorySelector);
 
 
 
@@ -96,16 +96,6 @@ export function addCategory() {
 
         //adding event listener for the delete button
         deleteCategoryBtn.addEventListener("click", deleteCategory);
-
-        //document.getElementById("subCategory").addEventListener("click", changeCategory);
-        //subCategory.style.cursor = 'pointer';
-
-        //let categorySelector = document.getElementById("categorySelector").value;
-        //categorySelector.style.cursor = 'pointer';
-        //document.getElementById("categorySelector").addEventListener("click", changeCategory);
-
-        //let categoryDescID = document.querySelector(categoryDesc);
-        //categoryDesc.addEventListener("click", changeCategory);
         
     }
 
