@@ -4,6 +4,9 @@ import { changeCategory } from './change-category.js'
 export function addCategory() {
     //console.log("add category button pressed")
 
+    //resets the input value when you go to create a new category
+    document.getElementById("categoryDesc").value = "";
+
     //All of this is the Add Category popup menu
     // Get the modal
     var modal = document.getElementById("myCategoryModal");
@@ -37,8 +40,14 @@ export function addCategory() {
     submitCategory.onclick = function submitCategory () {
         //console.log('sumbit category button pressed')
         var addCategory = document.getElementById("addCategory");
-        var categoryDesc = document.getElementById("categoryDesc").value;
+        var categoryDescWithSpaces = document.getElementById("categoryDesc").value;
+        var categoryDesc = categoryDescWithSpaces.replace(/\s/g, "");
+
+        if (categoryDesc == "") {
+            console.log('ERASDFG SAURGHEAWRIGHN')
+        }
         
+        else {
 
         //selecting the category column div and making it a constant so we can
         //append new categories to it
@@ -57,7 +66,7 @@ export function addCategory() {
         //adding the label
         const categoryLabel = document.createElement("label");
         categoryLabel.classList.add("task");
-        categoryLabel.innerHTML = categoryDesc;
+        categoryLabel.innerHTML = categoryDescWithSpaces;
         subCategory.appendChild(categoryLabel);
 
         //adding the x box
@@ -82,7 +91,7 @@ export function addCategory() {
         const categorySelector = document.querySelector(".categorySelector");
         const categorySelectorOption = document.createElement("option");
         categorySelectorOption.setAttribute("value", categoryDesc);
-        categorySelectorOption.innerHTML = categoryDesc;
+        categorySelectorOption.innerHTML = categoryDescWithSpaces;
         categorySelector.appendChild(categorySelectorOption);
         //console.log(categorySelector);
 
@@ -96,6 +105,7 @@ export function addCategory() {
 
         //adding event listener for the delete button
         deleteCategoryBtn.addEventListener("click", deleteCategory);
+    }
         
     }
 

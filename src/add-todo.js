@@ -4,7 +4,7 @@ import { checkBox } from './check-box.js'
 export function addTodo() {
     console.log("add todo button pressed")
     
-    //resets the input values when you go to create a new event
+    //resets the input values when you go to create a new to do
     document.getElementById("toDoDesc").value = "";
     document.getElementById("toDoDueDate").value = "";
 
