@@ -1,5 +1,6 @@
 import { deleteTodo } from './delete-todo.js'
 import { checkBox } from './check-box.js'
+import { toDoList } from './index.js'
 
 export function addTodo() {
     console.log("add todo button pressed")
@@ -48,6 +49,7 @@ export function addTodo() {
         //append new todo's to it
         const mainCategoryList = document.querySelector(".mainCategoryList");
         const subCategoryList = document.querySelector("."+categorySelector);
+        let subCategoryListString = subCategoryList.toString();
 
         //creating the todo div for the individual todo's
         const toDo = document.createElement("div");
@@ -93,10 +95,47 @@ export function addTodo() {
         //when submit button is pressed, close the modal
         modal.style.display = "none";
 
+
+
+
+
+
+        //local storage stuff attempt 2
+        let toDoString = JSON.stringify(toDo)
+        console.log(toDo)
+        console.log("^^toDo")
+        console.log(toDoString)
+        console.log("^^toDoString")
+        localStorage.setItem("toDoItem", toDoString)
+
+
+
+/*
+        //local storage stuff
+        toDoList.push(toDo)
+        console.log(toDoList)
+        console.log("^^^toDoList array")
+
+        let toDoListString = JSON.stringify(toDoList)
+        console.log(toDoListString)
+        console.log("^^^toDoList array AFTER stringify")
+
+        localStorage.setItem("toDoList", toDoListString)
+*/
+
+        /*
+        localStorage.setItem(toDoDesc, JSON.stringify(toDoList))
+        console.log(localStorage)
+        let toDoString = localStorage.getItem(toDoDesc)
+        let toDoStringParsed = JSON.parse(toDoString);
+        console.log(toDoStringParsed)
+        console.log("^^^ToDoStringParsed")
+        */
+
         
 /*
 
-        //local storage stuff
+        
         localStorage.clear();
         let listColumn = document.getElementById("listColumn");
         let listColumnStringify = JSON.stringify(listColumn.innerHTML);

@@ -59,7 +59,7 @@ export function addCategory() {
         //these will all be called sub categories, main category stays the same and cant be deleted
         const subCategory = document.createElement("div");
         subCategory.classList.add("subCategory");
-        subCategory.setAttribute("id", categoryDesc)
+        subCategory.setAttribute("id", "a"+categoryDesc) //added the "a" so numbers can be used as categories
         subCategory.setAttribute("style", "cursor: pointer")
         subCategory.addEventListener("click", changeCategory);
         categoryColumn.insertBefore(subCategory, addCategory);
@@ -85,14 +85,14 @@ export function addCategory() {
         //append new list containers to it
         const listColumn = document.querySelector(".listColumn");
         const subCategoryList = document.createElement("div");
-        subCategoryList.classList.add(categoryDesc);
-        subCategoryList.setAttribute("id", categoryDesc);
+        subCategoryList.classList.add("a"+categoryDesc);
+        subCategoryList.setAttribute("id", "a"+categoryDesc);
         listColumn.insertBefore(subCategoryList, addTodo);
 
         //add an option to select this sub category in the add task modal
         const categorySelector = document.querySelector(".categorySelector");
         const categorySelectorOption = document.createElement("option");
-        categorySelectorOption.setAttribute("value", categoryDesc);
+        categorySelectorOption.setAttribute("value", "a"+categoryDesc);
         categorySelectorOption.innerHTML = categoryDescWithSpaces;
         categorySelector.appendChild(categorySelectorOption);
         //console.log(categorySelector);

@@ -11,13 +11,27 @@ console.log('hello new program')
 
 
 
+export let toDoList = [];
+
+//local storage attempt 2
+
+//get data from local storage
+function getToDoList() {
+    let savedToDoList = localStorage.getItem("toDoItem")
+    console.log(savedToDoList)
+    let savedToDoListParsed = JSON.parse(savedToDoList);
+    if (!savedToDoListParsed) {
+        savedToDoListParsed = [];
+    }
+    console.log("getToDoList ran")
+    console.log(savedToDoListParsed)
+    console.log("^^^savedToDoListParsed")
+}
+
+getToDoList();
 
 
-
-
-
-//currently working here nothing else in any other file really changed
-
+/*
 window.addEventListener ("beforeunload", function (event) {
 
     console.log('asfasdf')
@@ -35,10 +49,10 @@ window.addEventListener ("beforeunload", function (event) {
     localStorage.setItem('listColumn', JSON.stringify(listColumnStringifyNoSpecial))
     
 });
+*/
 
-
-
-//local storage stuff
+/*
+//local storage stuff attempt 1
 let savedListColumn = localStorage.getItem('listColumn');
 let listColumn = document.getElementById("listColumn");
 
@@ -49,12 +63,15 @@ if (savedListColumn) {
 else {
     console.log("no")
 }
+*/
 
 
 
 
-
-
+//buttons arent working after refresh
+//i think it has to do w the event listeners
+//when i uncomment those if statements, it only works for the first button available
+//which is the first to do's check box
 
 
 
