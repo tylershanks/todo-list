@@ -75,8 +75,13 @@ export function addTodo() {
         //adding the due date
         const toDoDate = document.createElement("div");
         toDoDate.classList.add("dueDate");
-        toDoDate.innerHTML = "Due by: " + toDoDueDate;
-        toDo.appendChild(toDoDate);
+        if (toDoDueDate == "") {
+            toDoDate.innerHTML = "";
+        }
+        else {
+            toDoDate.innerHTML = "Due by: " + toDoDueDate;
+        }
+            toDo.appendChild(toDoDate);
 
         //adding the x box
         const deleteTodoBtn = document.createElement("button")
@@ -88,15 +93,29 @@ export function addTodo() {
         //when submit button is pressed, close the modal
         modal.style.display = "none";
 
+        
+/*
+
+        //local storage stuff
+        localStorage.clear();
+        let listColumn = document.getElementById("listColumn");
+        let listColumnStringify = JSON.stringify(listColumn.innerHTML);
+        let listColumnStringifyNoSpecial = listColumnStringify.replace(/\\n/g, "")
+                                                              .replace(/[\"\\\"]/g, "")
+                                                              .replace(/[\"]/g, "")
+                                                              .replace(/[\"\"]/g, "")
+                                                              .replace(/\"/g, "")
+        //console.log(listColumn.innerHTML)
+
+        localStorage.setItem('listColumn', JSON.stringify(listColumnStringifyNoSpecial))
+
+        
+
+        */
+
         //adding both event listeners for the delete button and the check box
         deleteTodoBtn.addEventListener("click", deleteTodo);
         checkBoxBtn.addEventListener("click", checkBox);
-
-
-
-
-
-        
 
         
     }

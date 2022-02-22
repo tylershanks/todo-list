@@ -42,9 +42,11 @@ export function addCategory() {
         var addCategory = document.getElementById("addCategory");
         var categoryDescWithSpaces = document.getElementById("categoryDesc").value;
         var categoryDesc = categoryDescWithSpaces.replace(/\s/g, "");
+        let categoryPlaceholder = document.getElementById('categoryDesc')
+        categoryPlaceholder.setAttribute("placeholder", "Enter Category Here")
 
         if (categoryDesc == "") {
-            console.log('ERASDFG SAURGHEAWRIGHN')
+            categoryPlaceholder.setAttribute("placeholder", "Enter Category Here *Required")
         }
         
         else {

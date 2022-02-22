@@ -48,5 +48,7 @@ export function deleteCategory() {
                 mainCatBtn.click();
                 console.log("main cat butn should be clicked")
             }
+
+            
     
 }
