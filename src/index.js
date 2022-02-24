@@ -14,22 +14,29 @@ console.log('hello new program')
 export let toDoList = [];
 
 //local storage attempt 2
-
+/*
 //get data from local storage
 function getToDoList() {
     let savedToDoList = localStorage.getItem("toDoItem")
+    let savedToDoListNoString = localStorage.getItem("toDoNoStringify")
     console.log(savedToDoList)
+    console.log("^^SavedToDoList")
+    console.log(savedToDoListNoString)
+    console.log("^^savedToDoListNoString")
     let savedToDoListParsed = JSON.parse(savedToDoList);
     if (!savedToDoListParsed) {
         savedToDoListParsed = [];
     }
+
+    let listColumn = document.getElementById("listColumn");
+    //listColumn.innerHTML = savedToDoListNoString;
     console.log("getToDoList ran")
     console.log(savedToDoListParsed)
     console.log("^^^savedToDoListParsed")
 }
 
 getToDoList();
-
+*/
 
 /*
 window.addEventListener ("beforeunload", function (event) {

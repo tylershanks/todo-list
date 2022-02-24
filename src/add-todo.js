@@ -1,6 +1,7 @@
 import { deleteTodo } from './delete-todo.js'
 import { checkBox } from './check-box.js'
 import { toDoList } from './index.js'
+import { createToDo } from './create-todo'
 
 export function addTodo() {
     console.log("add todo button pressed")
@@ -54,11 +55,17 @@ export function addTodo() {
         //creating the todo div for the individual todo's
         const toDo = document.createElement("div");
         toDo.classList.add("todo");
-        toDo.setAttribute("id", "todo")
+        toDo.setAttribute("id", toDoDesc)
         //mainCategoryList.insertBefore(toDo, addTodo);
         subCategoryList.appendChild(toDo);
         //mainCategoryList.appendChild(toDo);
 
+        
+        //trying to make this all a separate function
+        //createToDo(toDoDesc, toDoDueDate);
+        //this didnt work. for whatever reason, when i make 2 todos with the same
+        //description, when the function is like it is now they are separate.
+        //but if i use the createToDo function, it bugs out and adds the new todo to the old one
 
         //adding to the todo itself
         //adding the checkbox
@@ -92,6 +99,8 @@ export function addTodo() {
         deleteTodoBtn.innerHTML = "X";
         toDo.appendChild(deleteTodoBtn);
 
+        deleteTodoBtn.addEventListener("click", deleteTodo);
+        checkBoxBtn.addEventListener("click", checkBox);
         //when submit button is pressed, close the modal
         modal.style.display = "none";
 
@@ -99,15 +108,16 @@ export function addTodo() {
 
 
 
-
+/*
         //local storage stuff attempt 2
         let toDoString = JSON.stringify(toDo)
         console.log(toDo)
-        console.log("^^toDo")
+        console.log("^^toDo no string")
         console.log(toDoString)
         console.log("^^toDoString")
         localStorage.setItem("toDoItem", toDoString)
-
+        localStorage.setItem("toDoNoStringify", toDo)
+*/
 
 
 /*
@@ -153,8 +163,7 @@ export function addTodo() {
         */
 
         //adding both event listeners for the delete button and the check box
-        deleteTodoBtn.addEventListener("click", deleteTodo);
-        checkBoxBtn.addEventListener("click", checkBox);
+        
 
         
     }
