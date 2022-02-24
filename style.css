@@ -29,8 +29,9 @@ body {
     grid-template-rows: 60px;
     font-family: sans-serif;
 
-    width: 1440px;
-    height: 500px;
+    width: 80%;
+    max-width: 80rem;
+    height: 30rem;
 
     filter: drop-shadow(0 0 0.75rem rgb(29, 29, 29));
     
@@ -74,6 +75,7 @@ body {
   padding-right: 80%;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  padding-left: 47%;
 }
 
 #maincatbutn:hover {
