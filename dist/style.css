@@ -5,6 +5,10 @@ html {
   font-weight: 600;
 }
 
+footer {
+  padding-top: 1rem;
+}
+
 
 body {
     display: flex;
