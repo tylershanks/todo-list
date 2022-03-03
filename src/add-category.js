@@ -38,7 +38,7 @@ export function addCategory() {
 
 
     submitCategory.onclick = function submitCategory () {
-        //console.log('sumbit category button pressed')
+        console.log('sumbit category button pressed')
         var addCategory = document.getElementById("addCategory");
         var categoryDescWithSpaces = document.getElementById("categoryDesc").value;
         var categoryDesc = categoryDescWithSpaces.replace(/\s/g, "");
