@@ -1,17 +1,18 @@
 # todo-list
 
-To-Do List project from The Odin Project.
+[Here is a link to a live version of this site on GitHub Pages](https://tylershanks.github.io/todo-list/)
+
+### What tools were used?
 
 This project was created using Javascript, HTML, CSS, JSON, and webpack. 
 
-There are more features than just a basic to-do list. Some of these features include:
-1) Create and delete different categories. 
-2) Group different to-do's based on created categories.
-3) View only the to-do's within a specified category.
-4) Due dates can be added to individual to-do's.
-5) Cross out to-do's when they are finished.
+### Why did you build this project?
 
-One feature that I would like to add one day is local storage. As of right now, the to-do's are lost when the page is closed or refreshed. Instead of adding it now, however, I am choosing to move ahead with The Odin Project to further my learning.
+This project was a part of The Odin Project's Fullstack Javascript curriculum. This project was created before any intros into React or any other Javascript libraries. Creating this with just vanilla Javascript, HTML, and CSS was definitely a challenge but it really helped me nail down a lot of primary concepts.
 
-
-Github Pages: https://tylershanks.github.io/todo-list/
+### Features
+  - Create and delete different categories. 
+  - Group different to-do's based on created categories.
+  - View only the to-do's within a specified category.
+  - Due dates can be added to individual to-do's.
+  - Cross out to-do's when they are finished.
